@@ -1,0 +1,463 @@
+
+/*FONTER*/
+
+@font-face {
+    font-family: 'Bystander';
+    src: url(fonts/BystanderSans-SemiBold.ttf);
+}
+@font-face {
+    font-family: 'PoppinsLight';
+    src: url(fonts/Poppins-ExtraLight.ttf);
+}
+@font-face {
+    font-family: 'PoppinsLight';
+    src: url(fonts/Poppins-Regular.ttf);
+    font-weight: 200;
+}
+@font-face {
+    font-family: 'PoppinsSemi';
+    src: url(fonts/Poppins-SemiBold.ttf);
+}
+@font-face {
+    font-family: 'PoppinsBold';
+    src: url(fonts/Poppins-Bold.ttf);
+}
+
+/*ELEMENTER*/
+
+body {
+    margin: 0px;
+    font-family: 'Prompt', sans-serif;
+    color: white;
+    background: #202731;
+    
+}
+.header{
+    background-image: url(file:///Users/thomasskrolsvik/Desktop/On%20Target/Melon%20Media/Bilder/red.jpg);
+    background-size: cover;
+
+    position: relative;
+    display: grid;
+    flex-direction: column;
+    align-items: center;
+    height: 120px;
+    padding: 0px 20vw;
+    justify-content: center;
+    
+    grid-template-columns: (21,1fr);
+    grid-template-rows: (1,1fr);
+    grid-template-areas: 
+    ". a . . . . . . . . . b . . . e . . . c . . . . d ."
+    ;
+    gap: 15px;
+    
+}
+.dropbtn {
+    background-color: rgba(0,0,0,0.0);
+    font-size: 16.5px;
+    border: none;
+    font-family: "PoppinsLight";
+    font-weight: 200;
+    color: #353B47;
+    grid-area: b;
+    cursor: pointer;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    font-size: 15px;
+    line-height: 13px;
+    position: absolute;
+    background-color: rgba(0,0,0,0.0);
+    color: #353B47;
+    min-width: 160px;
+    z-index: 1;
+    text-decoration: none;
+}
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {
+    background-color: rgba(0,0,0,0.0);
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown:hover .dropbtn {
+    background-color: rgba(0,0,0,0.0);
+    color: white;
+    text-decoration: underline white;
+}
+.footer{
+    background-image: url(file:///Users/thomasskrolsvik/Desktop/On%20Target/Melon%20Media/Bilder/BT.jpg);
+    background-size: cover;
+
+    position: relative;
+    display: grid;
+    flex-direction: column;
+    align-items: center;
+    height: 120px;
+    padding: 0px 20vw;
+    justify-content: center;
+}
+.HJEM{
+    grid-area: a;
+    color: #353B47;
+    font-family: "PoppinsLight";
+    font-weight: 200;
+    font-size: 16.5px;
+}
+.PORTFOLIO{
+    grid-area: c;
+    color: #353B47;
+    font-family: "PoppinsLight";
+    font-weight: 200;
+    font-size: 16.5px;
+
+}
+.KONTAKT{
+    grid-area: d;
+    color: #353B47;
+    font-family: "PoppinsLight";
+    font-weight: 200;
+    font-size: 16.5px;
+
+}
+.text4{
+    font-size: 30px;
+    font-family: 'PoppinsBold';
+    color: #353B47;
+}
+.text5{
+    font-size: 30px;
+    font-family: 'PoppinsBold';
+    color: #353B47;
+}
+.text6{
+    font-size: 30px;
+    font-family: 'PoppinsBold';
+    color: #353B47;
+}
+.headerlogo{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 120px;
+    justify-content: center;
+    width: 172.8px;
+    height: 66.42px;
+    grid-area: e;
+}
+.footerlogo{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 120px;
+    justify-content: center;
+    width: 220.8px;
+    height: 84.87px;
+}
+.lightbulb{
+    width: 500px;
+}
+.text1{
+    font-size: 105px;
+    font-family: 'Bystander';
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    color: rgba(0, 0, 0, 0);
+
+}
+.text2{
+    font-size: 105px;
+    font-family: 'Bystander';
+    color: #353B47;
+
+}
+.text3{
+    font-size: 17px;
+    font-family: 'PoppinsLight';
+    color: #353B47;
+    width: 800px;
+    
+
+}
+.button1{
+    background-color: #353B47;
+    border: none;
+    color: white;
+    font-family: 'PoppinsBold';
+    padding: 15px 32px;
+    text-align: center;
+    justify-content: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 395px;
+    height: 90px;
+    cursor:pointer;
+}
+.button2{
+    color: #353B47;
+    font-family: 'PoppinsBold';
+    padding: 15px 32px;
+    text-align: center;
+    justify-content: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 395px;
+    height: 90px;
+    border:none;
+    border:solid 1px black;
+    border-radius: 0px;
+    background: rgba(255, 255, 255,0);
+    cursor:pointer;
+}
+.box{     
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    overflow: hidden;
+    line-height: 0;
+    height: 250px;
+    -webkit-mask-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBpZD0ic3ZnIiB2aWV3Qm94PSIwIDAgMTQ0MCA0MDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgY2xhc3M9InRyYW5zaXRpb24gZHVyYXRpb24tMzAwIGVhc2UtaW4tb3V0IGRlbGF5LTE1MCI+PHBhdGggZD0iTSAwLDQwMCBDIDAsNDAwIDAsMjAwIDAsMjAwIEMgNjIuNzY5MjMwNzY5MjMwNzQ1LDE4MS4wMDI1NjQxMDI1NjQxIDEyNS41Mzg0NjE1Mzg0NjE0OSwxNjIuMDA1MTI4MjA1MTI4MiAyMTksMTYzIEMgMzEyLjQ2MTUzODQ2MTUzODUsMTYzLjk5NDg3MTc5NDg3MTggNDM2LjYxNTM4NDYxNTM4NDY0LDE4NC45ODIwNTEyODIwNTEzIDUyMiwyMDAgQyA2MDcuMzg0NjE1Mzg0NjE1NCwyMTUuMDE3OTQ4NzE3OTQ4NyA2NTMuOTk5OTk5OTk5OTk5OSwyMjQuMDY2NjY2NjY2NjY2NjYgNzI5LDIyNCBDIDgwNC4wMDAwMDAwMDAwMDAxLDIyMy45MzMzMzMzMzMzMzMzNCA5MDcuMzg0NjE1Mzg0NjE1NSwyMTQuNzUxMjgyMDUxMjgyMDMgOTg5LDE5MyBDIDEwNzAuNjE1Mzg0NjE1Mzg0NSwxNzEuMjQ4NzE3OTQ4NzE3OTcgMTEzMC40NjE1Mzg0NjE1Mzg2LDEzNi45MjgyMDUxMjgyMDUxMiAxMjAyLDEzNiBDIDEyNzMuNTM4NDYxNTM4NDYxNCwxMzUuMDcxNzk0ODcxNzk0ODggMTM1Ni43NjkyMzA3NjkyMzA3LDE2Ny41MzU4OTc0MzU4OTc0MyAxNDQwLDIwMCBDIDE0NDAsMjAwIDE0NDAsNDAwIDE0NDAsNDAwIFoiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIwIiBmaWxsPSIjMDAwMDAwIiBmaWxsLW9wYWNpdHk9IjEiIGNsYXNzPSJ0cmFuc2l0aW9uLWFsbCBkdXJhdGlvbi0zMDAgZWFzZS1pbi1vdXQgZGVsYXktMTUwIHBhdGgtMCI+PC9wYXRoPjwvc3ZnPgo=);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: 100vw;
+}
+.box1{     
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    overflow: hidden;
+    line-height: 0;
+    height: 250px;
+    -webkit-mask-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBpZD0ic3ZnIiB2aWV3Qm94PSIwIDAgMTQ0MCA0MDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgY2xhc3M9InRyYW5zaXRpb24gZHVyYXRpb24tMzAwIGVhc2UtaW4tb3V0IGRlbGF5LTE1MCI+PHBhdGggZD0iTSAwLDQwMCBDIDAsNDAwIDAsMjAwIDAsMjAwIEMgOTAuMjE3OTQ4NzE3OTQ4NywyMjYuMzE1Mzg0NjE1Mzg0NjMgMTgwLjQzNTg5NzQzNTg5NzQsMjUyLjYzMDc2OTIzMDc2OTIzIDI2MiwyNDYgQyAzNDMuNTY0MTAyNTY0MTAyNiwyMzkuMzY5MjMwNzY5MjMwNzcgNDE2LjQ3NDM1ODk3NDM1OTEsMTk5Ljc5MjMwNzY5MjMwNzY3IDQ4OCwyMDMgQyA1NTkuNTI1NjQxMDI1NjQwOSwyMDYuMjA3NjkyMzA3NjkyMzMgNjI5LjY2NjY2NjY2NjY2NjYsMjUyLjIwMDAwMDAwMDAwMDAyIDcwNSwyNDUgQyA3ODAuMzMzMzMzMzMzMzMzNCwyMzcuNzk5OTk5OTk5OTk5OTggODYwLjg1ODk3NDM1ODk3NDUsMTc3LjQwNzY5MjMwNzY5MjMgOTM5LDE2NyBDIDEwMTcuMTQxMDI1NjQxMDI1NSwxNTYuNTkyMzA3NjkyMzA3NyAxMDkyLjg5NzQzNTg5NzQzNTgsMTk2LjE2OTIzMDc2OTIzMDc4IDExNzYsMjEwIEMgMTI1OS4xMDI1NjQxMDI1NjQyLDIyMy44MzA3NjkyMzA3NjkyMiAxMzQ5LjU1MTI4MjA1MTI4MjIsMjExLjkxNTM4NDYxNTM4NDYgMTQ0MCwyMDAgQyAxNDQwLDIwMCAxNDQwLDQwMCAxNDQwLDQwMCBaIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMCIgZmlsbD0iIzk5MDBlZiIgZmlsbC1vcGFjaXR5PSIxIiBjbGFzcz0idHJhbnNpdGlvbi1hbGwgZHVyYXRpb24tMzAwIGVhc2UtaW4tb3V0IGRlbGF5LTE1MCBwYXRoLTAiPjwvcGF0aD48L3N2Zz4=);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: 100vw;
+}
+.box2{     
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    overflow: hidden;
+    line-height: 0;
+    height: 250px;
+    -webkit-mask-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB2aWV3Qm94PSIwIDAgNTAwIDUwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cGF0aCBkPSJNIC0zLjA0MyAzMzcuOTE4IEMgLTMuMDQzIDMzNy45MTggLTMuMDQzIDMwNi41NjcgLTMuMDQzIDMwNi41NjcgQyAyMy4wMzEgMzE1LjQxMyA0OS4xMDUgMzI0LjI1OCA3NC42OTUgMzI4LjM3NiBDIDEwMC4yODQgMzMyLjQ5NCAxMjUuMzkgMzMxLjg4NiAxNTcuMDA1IDMyNC41MDcgQyAxODguNjIgMzE3LjEyOCAyMjYuNzQ2IDMwMi45NzkgMjU4LjY2MiAyOTcuMDcgQyAyOTAuNTc4IDI5MS4xNiAzMTYuMjg0IDI5My40OSAzNDUuNTQ1IDMwMi4zNDYgQyAzNzQuODA2IDMxMS4yMDMgNDA3LjYyMyAzMjYuNTg1IDQzNC41MzkgMzI4LjM3NiBDIDQ2MS40NTQgMzMwLjE2NyA0ODIuNDY5IDMxOC4zNjcgNTAzLjQ4MyAzMDYuNTY3IEMgNTAzLjQ4MyAzMDYuNTY3IDUwMy40ODMgMzM3LjkxOCA1MDMuNDgzIDMzNy45MTggTCAtMy4wNDMgMzM3LjkxOCBaIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMCIgZmlsbD0iIzAwMDAwMCIgZmlsbC1vcGFjaXR5PSIxIiBjbGFzcz0idHJhbnNpdGlvbi1hbGwgZHVyYXRpb24tMzAwIGVhc2UtaW4tb3V0IGRlbGF5LTE1MCBwYXRoLTAiIHN0eWxlPSIiLz4KPC9zdmc+);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: 100vw;
+}
+.text7{
+    font-size: 80px;
+    font-family: 'Bystander';
+    color: #353B47;
+}
+.blob1{
+    width: 400px;
+}
+.blob2{
+    width: 400px;
+}
+.blob3{
+    width: 400px;
+}
+.søkemotoricon{
+    width: 280px;
+}
+.bannericon{
+    width: 300px;
+}
+.webdesignicon{
+    width: 300px;
+}
+.redbox{
+    width: 570px;
+}
+.redbox1{
+    width: 570px;
+}
+.strokeform{
+    width: 700px;
+}
+.text1footer{
+    font-family: "PoppinsSemi";
+    font-size: 20px;
+    letter-spacing: 1px;
+
+}
+.text2footer{
+    font-family: "PoppinsLight";
+    font-weight: 200;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+.text3footer{
+    font-family: "PoppinsLight";
+    font-size: 13px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    color: white;
+}
+.ico1footer{
+    width: 70px;
+}
+.ico2footer{
+    width: 70px;
+}
+.ico3footer{
+    width: 70px;
+}
+.img1blacktex{
+    width: 550px;
+    border-radius: 15px;
+}
+.img2blacktex{
+    width: 600px;
+}
+.text1blacktex{
+    font-size: 80px;
+    font-family: 'Bystander';
+    color: white;
+}
+.text2blacktex{
+    font-size: 16px;
+    font-family: "PoppinsLight";
+    width: 800px;
+
+}
+
+/*SEKSJONER*/
+
+.redtex {
+    background-image: url(file:///Users/thomasskrolsvik/Desktop/On%20Target/Melon%20Media/Bilder/red.jpg);
+    background-size: cover;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 450px;
+    padding: 100px 20vw;
+    justify-content: center;
+
+}
+.redtex1 {
+    background-image: url(file:///Users/thomasskrolsvik/Desktop/On%20Target/Melon%20Media/Bilder/red.jpg);
+    background-size: cover;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 240px;
+    padding: 100px 20vw;
+    justify-content: center;
+
+}
+.redtex2 {
+    background-image: url(file:///Users/thomasskrolsvik/Desktop/On%20Target/Melon%20Media/Bilder/red.jpg);
+    background-size: cover;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 450px;
+    padding: 100px 20vw;
+    justify-content: center;
+
+}
+.red{
+    background: #dd3f31;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 400px;
+    padding: 100px 20vw;
+    justify-content: center;
+}
+.pink{
+    background: #ff0066;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 550px;
+    padding: 100px 20vw;
+    justify-content: center;
+}
+.blacktex{
+    background-image: url(file:///Users/thomasskrolsvik/Desktop/On%20Target/Melon%20Media/Bilder/BT.jpg);
+    background-size: cover;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 400px;
+    padding: 100px 20vw;
+    justify-content: center;
+    overflow: hidden;
+}
+.white{
+    background: white;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 500px;
+    padding: 100px 20vw;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/*EFFEKTER*/
+
+a:link {
+    color: #353B47;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:visited {
+    color: #353B47;
+    background-color: transparent;
+    text-decoration: none;
+}
+p.text4:hover {
+    color: #353B47;
+    background-color: transparent;
+    text-decoration: underline #353B47;
+}
+p.text5:hover {
+    color: #353B47;
+    background-color: transparent;
+    text-decoration: underline #353B47;
+}
+p.text6:hover {
+    color: #353B47;
+    background-color: transparent;
+    text-decoration: underline #353B47;
+}    
+.button2:hover{
+        color: white;
+}
+.button1:hover{
+        color: #C2253F;
+}
+
+/*CONTACT FORM*/
