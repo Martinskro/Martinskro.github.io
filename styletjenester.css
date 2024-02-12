@@ -3,24 +3,24 @@
 
 @font-face {
     font-family: 'Bystander';
-    src: url(fonts/BystanderSans-SemiBold.ttf);
+    src: url(Fonter/BystanderSans-SemiBold.ttf);
 }
 @font-face {
     font-family: 'PoppinsLight';
-    src: url(fonts/Poppins-ExtraLight.ttf);
+    src: url(Fonter/Poppins-ExtraLight.ttf);
 }
 @font-face {
     font-family: 'PoppinsLight';
-    src: url(fonts/Poppins-Regular.ttf);
+    src: url(Fonter/Poppins-Regular.ttf);
     font-weight: 200;
 }
 @font-face {
     font-family: 'PoppinsSemi';
-    src: url(fonts/Poppins-SemiBold.ttf);
+    src: url(Fonter/Poppins-SemiBold.ttf);
 }
 @font-face {
     font-family: 'PoppinsBold';
-    src: url(fonts/Poppins-Bold.ttf);
+    src: url(Fonter/Poppins-Bold.ttf);
 }
 
 /*ELEMENTER*/
@@ -33,7 +33,7 @@ body {
     
 }
 .header{
-    background-image: url(file:///Users/thomasskrolsvik/Desktop/On%20Target/Melon%20Media/Bilder/red.jpg);
+    background-image: url(Bilder/red.jpg);
     background-size: cover;
 
     position: relative;
@@ -47,7 +47,7 @@ body {
     grid-template-columns: (21,1fr);
     grid-template-rows: (1,1fr);
     grid-template-areas: 
-    ". a . . . . . . . . . b . . . e . . . c . . . . d ."
+    ". a . . . . b . . . e . . . c . . . . d ."
     ;
     gap: 15px;
     
@@ -95,7 +95,7 @@ body {
     text-decoration: underline white;
 }
 .footer{
-    background-image: url(file:///Users/thomasskrolsvik/Desktop/On%20Target/Melon%20Media/Bilder/BT.jpg);
+    background-image: url(Bilder/BT.jpg);
     background-size: cover;
 
     position: relative;
@@ -108,6 +108,13 @@ body {
 }
 .HJEM{
     grid-area: a;
+    color: #353B47;
+    font-family: "PoppinsLight";
+    font-weight: 200;
+    font-size: 16.5px;
+}
+.TJENESTER{
+    grid-area: b;
     color: #353B47;
     font-family: "PoppinsLight";
     font-weight: 200;
@@ -405,7 +412,7 @@ body {
 /*SEKSJONER*/
 
 .redtex{
-    background-image: url(file:///Users/thomasskrolsvik/Desktop/On%20Target/Melon%20Media/Bilder/red.jpg);
+    background-image: url(Bilder/red.jpg);
     background-size: cover;
 
     position: relative;
@@ -418,7 +425,7 @@ body {
 
 }
 .redtex2{
-    background-image: url(file:///Users/thomasskrolsvik/Desktop/On%20Target/Melon%20Media/Bilder/red.jpg);
+    background-image: url(Bilder/red.jpg);
     background-size: cover;
 
     position: relative;
