@@ -1,0 +1,215 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex; /* Bruk flex layout */
+    justify-content: space-between; /* Plasser elementene på venstre og høyre side */
+    align-items: center; /* Sentrer innhold vertikalt */
+    background-color: #fefefe;
+    color: black;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: 'Host Grotesk', sans-serif;
+}
+
+.navbar-text {
+    margin-left: 50px;
+}
+
+.navbar-buttons {
+    display: flex; /* Bruk flex for knappene */
+    gap: 15px; /* Mellomrom mellom knappene */
+    margin-right: 50px;
+}
+
+.nav-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    color: white;
+    background-color: #2a9d8f;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: 'Host Grotesk', sans-serif;
+}
+
+.nav-btn:hover {
+    background-color: #21867a;
+}
+
+.section1 {
+    height: 600px;
+    background-color: #fefefe;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 20px;
+}
+
+.animated-webp {
+    width: 50%; /* Juster størrelsen etter behov */
+    max-width: 400px; /* Juster maksimal bredde etter behov */
+    height: auto;
+    margin-right: 8%; /* Juster marginen for finjustering */
+}
+
+.text-container {
+    width: 45%; /* Juster bredde etter behov */
+    margin-left: 8%;
+}
+
+.text-container h1 {
+    margin: 0 0 10px;
+    font-family: 'Host Grotesk', sans-serif;
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 100%;
+}
+
+.text-container p {
+    margin: 20px 0 20px 0;
+    font-family:'Host Grotesk', sans-serif;
+}
+
+.btn {
+    display: inline-block;
+    padding: 18px 40px;
+    font-size: 16px;
+    color: white;
+    background-color: #2a9d8f;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: 'Host Grotesk', sans-serif;
+    font-weight: 600;
+}
+
+.btn:hover {
+    background-color: #21867a;
+}
+
+.textbox {
+    display: inline-block;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 15px;
+    background-color: #f7f7f7; /* Lys bakgrunn */
+}
+
+.textbox p {
+    margin: 3px 0; /* Mellomrom mellom linjene */
+    font-size: 16px; /* Juster skriftstørrelse etter behov */
+    font-family: 'Host Grotesk', sans-serif;
+    line-height: 100%;
+}
+
+.button-textbox-container {
+    display: flex; /* Aligns child elements horizontally */
+    align-items: center; /* Centers them vertically */
+    gap: 10px; /* Adds space between the button and the textbox */
+}
+
+.section2 {
+    background: linear-gradient(to top right, #00c0ff, #0054ff);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px; /* Uniform padding */
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Full width for proper centering */
+}
+
+.section-title {
+    margin: 0; /* Remove standard margin */
+    padding-bottom: 40px; /* Add spacing below the title */
+    font-size: 50px;
+    color: white;
+    text-align: center;
+    font-family: 'Host Grotesk', sans-serif;
+    font-weight: 900;
+}
+
+.box-container {
+    display: flex;
+    justify-content: center; /* Center the boxes horizontally */
+    gap: 30px; /* Space between boxes */
+    width: 100%;
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
+}
+
+.box {
+    background-color: #fefefe;
+    flex: 1 1 220px; /* Responsive resizing */
+    min-width: 180px;
+    max-width: 300px; /* Narrower maximum size */
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Start content from top */
+    align-items: flex-start; /* Align items to the left */
+    text-align: left;
+}
+
+.box-content {
+    display: flex;
+    flex-direction: row; /* Align image and text horizontally */
+    align-items: flex-start; /* Align items at the top */
+    width: 100%; /* Full width of the content */
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.box-image {
+    width: 40px; /* Smaller width for the image */
+    height: auto;
+    border-radius: 5px;
+    margin-right: 10px; /* Space between the image and text */
+}
+
+.text-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align text to the left */
+}
+
+.box-header {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Host Grotesk', sans-serif;
+}
+
+.box-description {
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 0;
+    font-weight: 500;
+    font-family: 'Host Grotesk', sans-serif;
+}
+
+.section3 {
+    background-color: #e76f51;
+    height: 350px;
+}
+
+.section4 {
+    background-color: #264653;
+    height: 350px;
+}
