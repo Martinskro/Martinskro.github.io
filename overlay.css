@@ -1,0 +1,51 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 84, 255, 0.6); /* Half-transparent blue */
+    display: none; /* Initially hidden */
+    z-index: 1000; /* Ensure it overlays all other content */
+}
+
+.overlay-corner {
+    position: absolute;
+    width: 90px; /* Adjust size as needed */
+    height: auto;
+}
+
+.top-left {
+    top: 20px;
+    left: 20px;
+}
+
+.top-right {
+    top: 20px;
+    right: 20px;
+}
+
+.bottom-left {
+    bottom: 20px;
+    left: 20px;
+}
+
+.bottom-right {
+    bottom: 20px;
+    right: 20px;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center text */
+    color: white;
+    font-size: 70px; /* Adjust as needed */
+    font-family: 'Host Grotesk', sans-serif;
+    text-align: center;
+    font-weight: 900;
+    white-space: nowrap; /* Prevents the text from wrapping */
+    overflow: hidden; /* Ensures text stays within the element */
+    text-overflow: ellipsis; /* Adds ellipsis (...) if the text overflows */
+}

@@ -30,9 +30,9 @@ body, html {
 
 .nav-btn {
     padding: 10px 20px;
-    font-size: 14px;
+    font-size: 16px;
     color: white;
-    background-color: #2a9d8f;
+    background-color: #0054ff;
     border: none;
     border-radius: 20px;
     cursor: pointer;
@@ -41,7 +41,7 @@ body, html {
 }
 
 .nav-btn:hover {
-    background-color: #21867a;
+    background-color: #00c0ff;
 }
 
 .section1 {
@@ -55,14 +55,14 @@ body, html {
 }
 
 .animated-webp {
-    width: 50%; /* Juster størrelsen etter behov */
-    max-width: 400px; /* Juster maksimal bredde etter behov */
+    width: 50%; /* Adjust size as needed */
+    max-width: 400px; /* Adjust maximum width as needed */
     height: auto;
-    margin-right: 8%; /* Juster marginen for finjustering */
+    margin-right: 8%; /* Adjust margin for positioning */
 }
 
 .text-container {
-    width: 45%; /* Juster bredde etter behov */
+    width: 45%; /* Adjust width as needed */
     margin-left: 8%;
 }
 
@@ -76,7 +76,34 @@ body, html {
 
 .text-container p {
     margin: 20px 0 20px 0;
-    font-family:'Host Grotesk', sans-serif;
+    font-family: 'Host Grotesk', sans-serif;
+}
+
+.big-container {
+    margin-top: 20px; /* Space between the text and the button-textbox-container */
+    padding: 20px;
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 15px;
+    background-color: #ffffff; /* Light background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); /* Equal shadow around the whole box */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: space-between; /* Distribute space between items */
+    align-items: stretch; /* Make child elements fill the width */
+    gap: 10px; /* Space between child elements */
+    text-align: center;
+}
+
+.button-textbox-container {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: flex-start; /* Align items to the start */
+    gap: 10px; /* Adds space between the button and the textbox */
+    width: 100%; /* Make sure it fills the container */
+}
+
+.btn, .textbox {
+    flex: 1; /* Allow the button and textbox to expand */
 }
 
 .btn {
@@ -84,7 +111,7 @@ body, html {
     padding: 18px 40px;
     font-size: 16px;
     color: white;
-    background-color: #2a9d8f;
+    background-color: #0054ff;
     border: none;
     border-radius: 40px;
     cursor: pointer;
@@ -94,7 +121,7 @@ body, html {
 }
 
 .btn:hover {
-    background-color: #21867a;
+    background-color: #00c0ff;
 }
 
 .textbox {
@@ -102,20 +129,21 @@ body, html {
     padding: 15px 20px;
     border: none;
     border-radius: 15px;
-    background-color: #f7f7f7; /* Lys bakgrunn */
+    background-color: #f7f7f7; /* Light background */
 }
 
 .textbox p {
-    margin: 3px 0; /* Mellomrom mellom linjene */
-    font-size: 16px; /* Juster skriftstørrelse etter behov */
+    margin: 3px 0; /* Space between lines */
+    font-size: 16px; /* Adjust font size as needed */
     font-family: 'Host Grotesk', sans-serif;
     line-height: 100%;
 }
 
-.button-textbox-container {
-    display: flex; /* Aligns child elements horizontally */
-    align-items: center; /* Centers them vertically */
-    gap: 10px; /* Adds space between the button and the textbox */
+.additional-text {
+    margin-top: 5px; /* Space above the text */
+    font-size: 18px; /* Adjust font size as needed */
+    color: #555;
+    font-family: 'Host Grotesk', sans-serif;
 }
 
 .section2 {
@@ -137,11 +165,10 @@ body, html {
 
 .section-title {
     margin: 0; /* Remove standard margin */
-    padding-bottom: 40px; /* Add spacing below the title */
-    font-size: 50px;
+    font-size: 35px;
     color: white;
     text-align: center;
-    font-family: 'Host Grotesk', sans-serif;
+    font-family: 'Host Poppins', sans-serif;
     font-weight: 900;
 }
 
@@ -200,16 +227,90 @@ body, html {
     font-size: 14px;
     margin-top: 5px;
     margin-bottom: 0;
-    font-weight: 500;
+    font-weight: 400;
     font-family: 'Host Grotesk', sans-serif;
 }
 
-.section3 {
-    background-color: #e76f51;
-    height: 350px;
+.section3, .section4 {
+    background-color: #fefefe;
+    height: 500px;
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: space-between; /* Space between image and text */
+    padding: 20px; /* Adds space inside the section */
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
-.section4 {
-    background-color: #264653;
-    height: 350px;
+.content-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px; /* Space between image and text */
+}
+
+.section3 .content-container {
+    flex-direction: row; /* Text on the left, image on the right */
+}
+
+.section4 .content-container {
+    flex-direction: row; /* Image on the left, text on the right */
+}
+
+.text-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center text vertically */
+}
+
+.section-header {
+    margin: 0 0 10px;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Host Grotesk', sans-serif;
+    font-weight: 900;
+    line-height: 100%;
+}
+
+.section-description {
+    margin: 0;
+    font-size: 16px;
+    color: #555;
+    font-family: 'Host Grotesk', sans-serif;
+    font-weight: 400;
+}
+
+.section-image {
+    width: 550px; /* Adjust size as needed */
+    height: auto;
+    border-radius: 10px; /* Optional: rounds corners */
+}
+
+.sticky-button {
+    position: fixed;
+    bottom: -100px; /* Hidden by default */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #0054ff;
+    color: white;
+    padding: 18px 40px;
+    border: none;
+    border-radius: 30px; /* Pill shape */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out; /* Smooth transition */
+    z-index: 1000; /* Ensure it stays on top */
+    font-family: 'Host Grotesk', sans-serif;
+    font-weight: 600;
+}
+
+.sticky-button.show {
+    bottom: 20px; /* Visible state */
+}
+
+.sticky-button:hover {
+    background-color: #00c0ff; /* Change background color on hover */
 }

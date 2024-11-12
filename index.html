@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Min Enkle Nettside</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="overlay.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
@@ -14,25 +15,28 @@
         <h2 class="navbar-text">3D ANIMATOR</h2>
         <div class="navbar-buttons">
             <button class="nav-btn">Log In</button>
-            <button class="nav-btn">Upload Image</button>
         </div>
     </div>
-    
     
     <section class="section section1">
         <div class="text-container">
             <h1>Free online photo to 3D-Animation</h1>
             <p>The free online photo to animation tool from MelonMedia lets you upload your photo image and convert it to a spinning 3D-animation in seconds.</p>
-            <div class="button-textbox-container">
-                <button class="btn">Upload your photo</button>
-                <div class="textbox">
-                    <p>Free to use</p>
-                    <p>No payment required</p>
+            
+            <div class="big-container">
+                <div class="button-textbox-container">
+                    <label for="sectionFileInput" class="btn">Upload your photo</label>
+                    <input type="file" id="sectionFileInput" style="display: none;">
+                    <div class="textbox">
+                        <p>Free to use</p>
+                        <p>No payment required</p>
+                    </div>
                 </div>
+                <p class="additional-text">or drop a file, paste an image or URL.</p>
             </div>
         </div>        
-        <img src="/Content/promologo.webp" alt="Animert bilde" class="animated-webp">
-    </section>
+        <img src="/Content/3dlogo.webp" alt="Animert bilde" class="animated-webp">
+    </section>    
     
     <section class="section section2">
         <div class="content-container">
@@ -69,9 +73,43 @@
         </div>
     </section>    
 
-    <section class="section section3"></section>
+    <section class="section section3">
+        <div class="content-container">
+            <div class="text-wrapper">
+                <h2 class="section-header">Convert Your Photo to 3D Animation for Free</h2>
+                <p class="section-description">3D animation adds depth and dimension to your visuals, making them more engaging and lifelike. Unlike static photos, 3D animations can be scaled, rotated, and manipulated in various ways without losing quality. Transform your photos into 3D animations for use in presentations, videos, advertisements, and more to create captivating and dynamic content.</p>
+            </div>
+            <img src="/Content/switch.png" alt="Section 3 Image" class="section-image">
+        </div>
+    </section>
+    
+    <section class="section section4">
+        <div class="content-container">
+            <img src="/Content/pending.png" alt="Section 4 Image" class="section-image">
+            <div class="text-wrapper">
+                <h2 class="section-header">An Easy-to-Use Photo to 3D Animation Converter</h2>
+                <p class="section-description">The 3D animation converter allows you to transform your photos into immersive animations effortlessly. Simply upload a photo from your device, and watch it come to life as a 3D animation in seconds. Download your new 3D creation instantly and use it in your presentations, social media, or upcoming projects to wow your audience.</p>
+            </div>
+        </div>
+    </section>    
 
-    <section class="section section4"></section>
+    <div id="overlay" class="overlay">
+        <!-- Images in the corners -->
+        <img src="/Content/TL.png" class="overlay-corner top-left" alt="Top Left Image">
+        <img src="/Content/TR.png" class="overlay-corner top-right" alt="Top Right Image">
+        <img src="/Content/BL.png" class="overlay-corner bottom-left" alt="Bottom Left Image">
+        <img src="/Content/BR.png" class="overlay-corner bottom-right" alt="Bottom Right Image">
+        
+        <!-- Center text -->
+        <div class="overlay-text">Drop image anywhere</div>
+    </div>
 
+    <!-- Sticky button -->
+    <button class="sticky-button" id="uploadButton">Upload photo</button>
+    <!-- Hidden file input for the sticky button -->
+    <input type="file" id="stickyFileInput" style="display: none;">
+
+    <script src="main.js"></script>
+    
 </body>
 </html>
