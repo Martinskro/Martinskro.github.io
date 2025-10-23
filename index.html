@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Martin Skrolsvik</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!--
+    - boxicons link
+  -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  
+  <!--
+    - EmailJS
+  -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/my-avatar.png" alt="Martin Skrolsvik" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Martin Skrolsvik">Martin Skrolsvik</h1>
+
+          <p class="title">Student / Full Stack Developer</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:martin.skrolsvik@icloud.com" class="contact-link">martin.skrolsvik@icloud.com</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="tel:+4791999088" class="contact-link">+47 919 99 088</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+
+              <time datetime="1982-06-23">December 31, 2002</time>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Oslo, Norway</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="https://github.com/Martinskro" class="social-link" target="_blank">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/martin-skrolsvik/" class="social-link" target="_blank">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfolio</button>
+          </li>
+
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            Hei! I'm Martin, a passionate full-stack developer and computer science student from Oslo, Norway. 
+            I love turning complex problems into elegant solutions through clean code and thoughtful design.
+            When I'm not coding, you'll find me exploring the beautiful Norwegian nature or experimenting with new technologies.
+          </p>
+
+          <p>
+            My journey in tech started with curiosity about how things work behind the scenes. Now I'm focused on 
+            building web applications that not only function flawlessly but also provide great user experiences. 
+            I believe in the power of technology to solve real-world problems, and I'm excited to contribute to 
+            innovative projects that make a difference.
+          </p>
+        </section>
+
+
+        <!--
+          - service
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">What I Do</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg" alt="Full-stack development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Full-Stack Development</h4>
+
+                <p class="service-item-text">
+                  Building complete web applications from database to user interface using modern technologies.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-design.svg" alt="UI/UX design icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">UI/UX Design</h4>
+
+                <p class="service-item-text">
+                  Creating intuitive and beautiful user interfaces that enhance the user experience.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-app.svg" alt="Mobile development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Mobile Development</h4>
+
+                <p class="service-item-text">
+                  Developing responsive web applications and exploring mobile app development.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-photo.svg" alt="Problem solving icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Problem Solving</h4>
+
+                <p class="service-item-text">
+                  Breaking down complex challenges and finding creative technical solutions.
+                </p>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+
+        <!--
+          - testimonials
+        -->
+
+        <section class="testimonials">
+
+          <h3 class="h3 testimonials-title">Interests & Hobbies</h3>
+
+          <ul class="testimonials-list has-scrollbar">
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Nature & Hiking</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Living in Norway, I'm fortunate to have access to incredible nature. I love hiking in the mountains 
+                    and exploring fjords. There's something about being in nature that clears my mind and inspires 
+                    creative thinking for coding projects.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-2.png" alt="Jessica miller" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Continuous Learning</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Technology evolves rapidly, and I'm always eager to learn new frameworks, languages, and tools. 
+                    Whether it's exploring the latest in React, diving into machine learning, or understanding 
+                    system architecture, I believe learning never stops.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-3.png" alt="Emily evans" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Gaming & Tech</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    I'm passionate about gaming and technology. Playing games helps me understand user experience 
+                    design from a different perspective, and I enjoy analyzing game mechanics and UI/UX decisions 
+                    that make games engaging.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-4.png" alt="Henry william" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Music & Creativity</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Music is a big part of my life, especially while coding. I find that different genres help 
+                    me focus in different ways - sometimes electronic music for complex problem-solving, 
+                    sometimes acoustic for creative design work.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </section>
+
+
+        <!--
+          - testimonials modal
+        -->
+
+        <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="testimonials-modal">
+
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
+              </figure>
+
+              <img src="./assets/images/icon-quote.svg" alt="quote icon">
+            </div>
+
+            <div class="modal-content">
+
+              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
+
+              <time datetime="2021-06-14">14 June, 2021</time>
+
+              <div data-modal-text>
+                <p>
+                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                  lot of experience
+                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                  consectetur adipiscing
+                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                </p>
+              </div>
+
+            </div>
+
+          </section>
+
+        </div>
+
+
+        <!--
+          - technologies
+        -->
+
+        <section class="clients">
+
+          <h3 class="h3 clients-title">Techstack & tools</h3>
+
+          <ul class="clients-list has-scrollbar">
+
+            <li class="clients-item">
+              <div class="tech-item">
+                <i class='bx bxl-javascript tech-icon'></i>
+                <span class="tech-name">JavaScript</span>
+              </div>
+            </li>
+
+            <li class="clients-item">
+              <div class="tech-item">
+                <i class='bx bxl-react tech-icon'></i>
+                <span class="tech-name">React</span>
+              </div>
+            </li>
+
+            <li class="clients-item">
+              <div class="tech-item">
+                <i class='bx bxl-nodejs tech-icon'></i>
+                <span class="tech-name">Node.js</span>
+              </div>
+            </li>
+
+            <li class="clients-item">
+              <div class="tech-item">
+                <i class='bx bxl-python tech-icon'></i>
+                <span class="tech-name">Python</span>
+              </div>
+            </li>
+
+            <li class="clients-item">
+              <div class="tech-item">
+                <i class='bx bx-data tech-icon'></i>
+                <span class="tech-name">SQL</span>
+              </div>
+            </li>
+
+            <li class="clients-item">
+              <div class="tech-item">
+                <i class='bx bxl-git tech-icon'></i>
+                <span class="tech-name">Git</span>
+              </div>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="school-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">University of Bergen (UiB) - Bachelor in Informatics: Computer Science</h4>
+
+              <span>2023 — 2026 (Currently studying)</span>
+
+              <p class="timeline-text">
+                Pursuing a Bachelor's degree in Informatics with focus on Computer Science. Located in Bergen, Norway, 
+                this program provides comprehensive education in software development, algorithms, data structures, 
+                and modern computing technologies.
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="briefcase-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Experience</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Co-founder and CEO - Kystskolen Digital AS</h4>
+
+              <span>June 2025 — Present</span>
+
+              <p class="timeline-text">
+                • Leading digital strategy and product development for e-learning subsidiary<br>
+                • Designed and launched React Native app with TypeScript, Supabase, and Cloudflare Workers<br>
+                • End-to-end execution from concept to market launch
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Marketing Consultant and Instructor - Kystskolen AS</h4>
+
+              <span>May 2024 — Present</span>
+
+              <p class="timeline-text">
+                • Developed digital customer journey and website design implementation<br>
+                • Shaped brand positioning and communication strategy for market expansion<br>
+                • Delivered 30+ boat license courses, training 350 students
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Junior Account Manager & Sales Support - Capgemini Norway AS</h4>
+
+              <span>Aug 2021 — Mar 2022</span>
+
+              <p class="timeline-text">
+                • 8-month internship supporting sales and business development initiatives<br>
+                • Analyzed customer and project data for business development<br>
+                • Contributed to Capgemini Ignite program recruitment activities
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Product Developer - Squarehead Technology AS</h4>
+
+              <span>Oct 2018 — Apr 2019</span>
+
+              <p class="timeline-text">
+                • Designed, built, and programmed drones for R&D of Acoustic Drone Detection technology<br>
+                • Collaborated with engineering team on security and surveillance application prototypes
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Coach - Royal Norwegian Yacht Club (KNS)</h4>
+
+              <span>June 2016 — Present</span>
+
+              <p class="timeline-text">
+                • Managed summer sailing school, leading 30 instructors and 100 children<br>
+                • Developed leadership and team management skills in water safety education
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="skill">
+
+          <h3 class="h3 skills-title">Download CV</h3>
+
+          <div class="cv-download-container content-card">
+            <div class="cv-description">
+              <p>Download my complete CV with detailed education, experience, and technical skills. Available in both English and Norwegian versions.</p>
+            </div>
+            
+            <div class="cv-download-options">
+              <div class="download-option">
+                <div class="download-info">
+                  <i class='bx bxs-flag-alt'></i>
+                  <span class="download-label">English Version</span>
+                </div>
+                <a href="./assets/docs/Martin_Skrolsvik_CV_Eng.pdf" class="download-btn" download="Martin_Skrolsvik_CV_English.pdf">
+                  <i class='bx bx-download'></i>
+                  <span>Download</span>
+                </a>
+              </div>
+              
+              <div class="download-option">
+                <div class="download-info">
+                  <i class='bx bxs-flag-alt'></i>
+                  <span class="download-label">Norsk Versjon</span>
+                </div>
+                <a href="./assets/docs/Martin_Skrolsvik_CV_Nor.pdf" class="download-btn" download="Martin_Skrolsvik_CV_Norsk.pdf">
+                  <i class='bx bx-download'></i>
+                  <span>Last Ned</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="portfolio">
+
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+
+        <section class="projects">
+
+          <div class="portfolio-container">
+            <!-- Portfolio Grid View -->
+            <div class="portfolio-grid-view" data-portfolio-grid>
+              <ul class="filter-list">
+
+                <li class="filter-item">
+                  <button class="active" data-filter-btn>All</button>
+                </li>
+
+                <li class="filter-item">
+                  <button data-filter-btn>Web design</button>
+                </li>
+
+                <li class="filter-item">
+                  <button data-filter-btn>Applications</button>
+                </li>
+
+                <li class="filter-item">
+                  <button data-filter-btn>Web development</button>
+                </li>
+
+              </ul>
+
+              <div class="filter-select-box">
+
+                <button class="filter-select" data-select>
+
+                  <div class="select-value" data-selecct-value>Select category</div>
+
+                  <div class="select-icon">
+                    <ion-icon name="chevron-down"></ion-icon>
+                  </div>
+
+                </button>
+
+                <ul class="select-list">
+
+                  <li class="select-item">
+                    <button data-select-item>All</button>
+                  </li>
+
+                  <li class="select-item">
+                    <button data-select-item>Web design</button>
+                  </li>
+
+                  <li class="select-item">
+                    <button data-select-item>Applications</button>
+                  </li>
+
+                  <li class="select-item">
+                    <button data-select-item>Web development</button>
+                  </li>
+
+                </ul>
+
+              </div>
+
+              <ul class="project-list">
+
+            <li class="project-item  active" data-filter-item data-category="web development" 
+                data-project-title="Personal Finance Tracker"
+                data-project-category="Web development"
+                data-project-description="A comprehensive personal finance tracking application built with React and Node.js. Features include expense tracking, budget management, financial goal setting, and detailed analytics dashboard."
+                data-project-image="./assets/images/project-1.jpg"
+                data-project-images="./assets/images/project-1.jpg,./assets/images/project-2.png,./assets/images/project-3.jpg"
+                data-project-github="https://github.com/Martinskro/personal-finance-tracker"
+                data-project-live="https://finance-tracker-demo.vercel.app">
+              <div class="project-link" data-project-link>
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Personal Finance Tracker</h3>
+
+                <p class="project-category">Web development</p>
+
+              </div>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development"
+                data-project-title="Weather App"
+                data-project-category="Web development"
+                data-project-description="A modern weather application built with React and integrated with weather APIs. Features include current weather conditions, 7-day forecast, location-based weather, and beautiful responsive design."
+                data-project-image="./assets/images/project-2.png"
+                data-project-images="./assets/images/project-2.png,./assets/images/project-4.png,./assets/images/project-5.png"
+                data-project-github="https://github.com/Martinskro/weather-app"
+                data-project-live="https://weather-app-demo.vercel.app">
+              <div class="project-link" data-project-link>
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Weather App</h3>
+
+                <p class="project-category">Web development</p>
+
+              </div>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design"
+                data-project-title="Portfolio Website"
+                data-project-category="Web design"
+                data-project-description="A modern, responsive portfolio website showcasing personal projects and skills. Built with clean HTML, CSS, and JavaScript, featuring smooth animations and mobile-first design principles."
+                data-project-image="./assets/images/project-3.jpg"
+                data-project-github="https://github.com/Martinskro/portfolio-website"
+                data-project-live="https://martinskrolsvik.vercel.app">
+              <div class="project-link" data-project-link>
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Portfolio Website</h3>
+
+                <p class="project-category">Web design</p>
+
+              </div>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="applications"
+                data-project-title="Task Management App"
+                data-project-category="Applications"
+                data-project-description="A comprehensive task management application built with React Native. Features include task creation, deadline tracking, team collaboration, and progress monitoring with intuitive user interface."
+                data-project-image="./assets/images/project-4.png"
+                data-project-github="https://github.com/Martinskro/task-management-app"
+                data-project-live="https://task-manager-demo.vercel.app">
+              <div class="project-link" data-project-link>
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Task Management App</h3>
+
+                <p class="project-category">Applications</p>
+
+              </div>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design"
+                data-project-title="Local Business Website"
+                data-project-category="Web design"
+                data-project-description="A modern, responsive website for local businesses. Built with clean HTML, CSS, and JavaScript, featuring contact forms, service showcases, and mobile-first design principles."
+                data-project-image="./assets/images/project-5.png"
+                data-project-github="https://github.com/Martinskro/local-business-website"
+                data-project-live="https://local-business-demo.vercel.app">
+              <div class="project-link" data-project-link>
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Local Business Website</h3>
+
+                <p class="project-category">Web design</p>
+
+              </div>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design"
+                data-project-title="E-learning Platform"
+                data-project-category="Web design"
+                data-project-description="An interactive e-learning platform designed for online education. Features include course management, student progress tracking, video streaming, and interactive quizzes with modern UI/UX design."
+                data-project-image="./assets/images/project-6.png"
+                data-project-github="https://github.com/Martinskro/elearning-platform"
+                data-project-live="https://elearning-platform-demo.vercel.app">
+              <div class="project-link" data-project-link>
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">E-learning Platform</h3>
+
+                <p class="project-category">Web design</p>
+
+              </div>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development"
+                data-project-title="Recipe Sharing App"
+                data-project-category="Web development"
+                data-project-description="A social recipe sharing platform built with React and Node.js. Users can create, share, and discover recipes with features like rating, commenting, and personalized recipe recommendations."
+                data-project-image="./assets/images/project-7.png"
+                data-project-github="https://github.com/Martinskro/recipe-sharing-app"
+                data-project-live="https://recipe-app-demo.vercel.app">
+              <div class="project-link" data-project-link>
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Recipe Sharing App</h3>
+
+                <p class="project-category">Web development</p>
+
+              </div>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="applications"
+                data-project-title="Study Planner"
+                data-project-category="Applications"
+                data-project-description="A comprehensive study planning application designed for students. Features include schedule management, assignment tracking, study session timers, and progress analytics to help optimize learning efficiency."
+                data-project-image="./assets/images/project-8.jpg"
+                data-project-github="https://github.com/Martinskro/study-planner"
+                data-project-live="https://study-planner-demo.vercel.app">
+              <div class="project-link" data-project-link>
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Study Planner</h3>
+
+                <p class="project-category">Applications</p>
+
+              </div>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development"
+                data-project-title="Hiking Trails App"
+                data-project-category="Web development"
+                data-project-description="A mobile-first hiking trails discovery app built with React Native. Features include trail maps, difficulty ratings, weather integration, and community reviews to help outdoor enthusiasts find their perfect hiking experience."
+                data-project-image="./assets/images/project-9.png"
+                data-project-github="https://github.com/Martinskro/hiking-trails-app"
+                data-project-live="https://hiking-trails-demo.vercel.app">
+              <div class="project-link" data-project-link>
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Hiking Trails App</h3>
+
+                <p class="project-category">Web development</p>
+
+              </div>
+            </li>
+
+              </ul>
+            </div>
+
+            <!-- Project Detail View -->
+            <div class="project-detail-view" data-project-detail>
+              <div class="project-detail-header">
+                <button class="back-to-portfolio-btn" data-back-to-portfolio>
+                  <ion-icon name="arrow-back-outline"></ion-icon>
+                  <span>Back to Portfolio</span>
+                </button>
+              </div>
+
+              <div class="project-detail-content">
+                <!-- Large Image Display with Navigation -->
+                <div class="project-image-gallery">
+                  <button class="gallery-nav-btn prev-btn" data-gallery-prev>
+                    <ion-icon name="chevron-back-outline"></ion-icon>
+                  </button>
+                  
+                  <div class="project-main-image">
+                    <img src="" alt="" data-detail-project-img>
+                  </div>
+                  
+                  <button class="gallery-nav-btn next-btn" data-gallery-next>
+                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                  </button>
+                </div>
+
+                <!-- Project Info -->
+                <div class="project-detail-info">
+                  <h3 class="project-detail-title" data-detail-project-title></h3>
+                  <p class="project-detail-category" data-detail-project-category></p>
+                  <p class="project-detail-description" data-detail-project-description></p>
+                  
+                  <div class="project-detail-links">
+                    <a href="#" class="project-detail-btn" data-detail-project-github target="_blank">
+                      <ion-icon name="logo-github"></ion-icon>
+                      <span>View Code</span>
+                    </a>
+                    <a href="#" class="project-detail-btn" data-detail-project-live target="_blank">
+                      <ion-icon name="open-outline"></ion-icon>
+                      <span>Live Demo</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </section>
+
+      </article>
+
+      <!--
+        - #CONTACT
+      -->
+
+      <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d128084.03975557553!2d10.620313711412418!3d59.89375210025288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46416e61f267f039%3A0x7e92605fd3231e9a!2sOslo!5e0!3m2!1sno!2sno!4v1761244638014!5m2!1sno!2sno"
+              width="400" height="300" loading="lazy"></iframe>
+          </figure>
+        </section>
+
+        <section class="contact-form">
+
+          <h3 class="h3 form-title">Let's Connect!</h3>
+
+          <form action="#" class="form" data-form>
+
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+            </div>
+
+            <textarea name="message" class="form-input" placeholder="Hi Martin! I'd love to discuss..." required data-form-input></textarea>
+
+            <button class="form-btn" type="submit" disabled data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+
+          </form>
+
+        </section>
+
+      </article>
+
+    </div>
+
+  </main>
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
