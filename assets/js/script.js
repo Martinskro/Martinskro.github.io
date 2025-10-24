@@ -172,11 +172,46 @@ const portfolioNavLink = Array.from(document.querySelectorAll('button[data-nav-l
 // gallery navigation variables
 const prevBtn = document.querySelector("[data-gallery-prev]");
 const nextBtn = document.querySelector("[data-gallery-next]");
-const detailProjectImg = document.querySelector("[data-detail-project-img]");
 
 // current project data
 let currentProjectImages = [];
 let currentImageIndex = 0;
+
+// Function to update project media (image or video)
+const updateProjectMedia = function (mediaSrc, altText) {
+  const mediaContainer = document.querySelector(".project-main-image");
+  const isVideo = mediaSrc.toLowerCase().endsWith('.webm') || mediaSrc.toLowerCase().endsWith('.mp4');
+  
+  if (isVideo) {
+    // Create video element
+    const video = document.createElement('video');
+    video.src = mediaSrc;
+    video.controls = true;
+    video.autoplay = true;
+    video.loop = true;
+    video.style.width = '100%';
+    video.style.height = '100%';
+    video.style.display = 'block';
+    video.style.objectFit = 'cover';
+    video.style.objectPosition = 'top';
+    
+    // Clear container and add video
+    mediaContainer.innerHTML = '';
+    mediaContainer.appendChild(video);
+  } else {
+    // Create image element
+    const img = document.createElement('img');
+    img.src = mediaSrc;
+    img.alt = altText;
+    img.style.width = '100%';
+    img.style.height = 'auto';
+    img.style.display = 'block';
+    
+    // Clear container and add image
+    mediaContainer.innerHTML = '';
+    mediaContainer.appendChild(img);
+  }
+};
 
 // portfolio navigation function
 const showProjectDetail = function (projectItem) {
@@ -196,8 +231,7 @@ const showProjectDetail = function (projectItem) {
   currentImageIndex = 0;
 
   // Update detail view content
-  detailProjectImg.src = currentProjectImages[currentImageIndex];
-  detailProjectImg.alt = title;
+  updateProjectMedia(currentProjectImages[currentImageIndex], title);
   document.querySelector("[data-detail-project-title]").textContent = title;
   document.querySelector("[data-detail-project-category]").textContent = category;
   document.querySelector("[data-detail-project-description]").textContent = description;
@@ -241,13 +275,13 @@ const updateGalleryButtons = function () {
 
 const showNextImage = function () {
   currentImageIndex = (currentImageIndex + 1) % currentProjectImages.length;
-  detailProjectImg.src = currentProjectImages[currentImageIndex];
+  updateProjectMedia(currentProjectImages[currentImageIndex], document.querySelector("[data-detail-project-title]").textContent);
   updateGalleryButtons();
 };
 
 const showPrevImage = function () {
   currentImageIndex = (currentImageIndex - 1 + currentProjectImages.length) % currentProjectImages.length;
-  detailProjectImg.src = currentProjectImages[currentImageIndex];
+  updateProjectMedia(currentProjectImages[currentImageIndex], document.querySelector("[data-detail-project-title]").textContent);
   updateGalleryButtons();
 };
 

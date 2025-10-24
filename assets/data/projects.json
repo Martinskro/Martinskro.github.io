@@ -22,9 +22,12 @@
       "title": "Portfolio Website",
       "category": "Web",
       "description": "A modern, responsive portfolio website showcasing personal projects and skills. Built with clean HTML, CSS, and JavaScript, featuring smooth animations and mobile-first design principles.",
-      "image": "./assets/images/project-3.jpg",
+      "image": "./assets/images/projects/portfolio/portfolio1.webp",
       "images": [
-        "./assets/images/project-3.jpg"
+        "./assets/images/projects/portfolio/portfolio1.webp",
+        "./assets/images/projects/portfolio/portfolio2.webp",
+        "./assets/images/projects/portfolio/portfolio3.webp",
+        "./assets/images/projects/portfolio/portfolio4.webp"
       ],
       "github": "",
       "live": "https://martinskro.github.io",
@@ -47,17 +50,42 @@
       },
       {
         "id": "3d-spinner",
-        "title": "Logo to 3D Spin Animation",
+        "title": "PMG to 3D-Animation",
         "category": "Others",
         "description": "A modern, responsive portfolio website showcasing personal projects and skills. Built with clean HTML, CSS, and JavaScript, featuring smooth animations and mobile-first design principles.",
         "image": "./assets/images/projects/3d-spinner/3d-spinner1.webp",
         "images": [
-          "./assets/images/projects/3d-spinner/3d-spinner1.webm",
-          "./assets/images/projects/3d-spinner/3d-spinner1.webp"
+          "./assets/images/projects/3d-spinner/3d-spinner1.webm"
         ],
         "github": "https://github.com/Martinskro/3d-logospin",
         "live": "https://3d-logospin.vercel.app/editor",
         "technologies": ["Typescrips", "CSS", "JavaScript"]
+      },
+      {
+        "id": "crust-kingdom",
+        "title": "Java RPG Game",
+        "category": "Others",
+        "description": "Pizza restaurant RPG game built in Java, featuring a 2D top-down view and a pizza-themed gameplay.",
+        "image": "./assets/images/projects/crust-kingdom/crust.webp",
+        "images": [
+          "./assets/images/projects/crust-kingdom/crust.webp"
+        ],
+        "github": "https://github.com/Martinskro/Crust-Kingdom",
+        "live": "",
+        "technologies": ["Java"]
+      },
+      {
+        "id": "fighter-jets",
+        "title": "1v1 Fighter Jet Game",
+        "category": "Others",
+        "description": "1v1 fighter jet game built in Java, featuring a 2D top-down view and a fighter jet-themed gameplay.",
+        "image": "./assets/images/projects/fighter-jets/fighterjets1.webp",
+        "images": [
+          "./assets/images/projects/fighter-jets/fighterjets1.webm"
+        ],
+        "github": "https://github.com/Martinskro/Fighter-Jets",
+        "live": "",
+        "technologies": ["Java"]
       }
   ]
 }
