@@ -48,6 +48,7 @@ class ProjectManager {
     li.setAttribute('data-project-images', project.images.join(','));
     li.setAttribute('data-project-github', project.github || '');
     li.setAttribute('data-project-live', project.live || '');
+    li.setAttribute('data-project-technologies', project.technologies ? project.technologies.join(',') : '');
 
     li.innerHTML = `
       <div class="project-link" data-project-link>

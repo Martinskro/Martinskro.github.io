@@ -1259,7 +1259,7 @@ main {
 .project-detail-info {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
 }
 
 .project-detail-title {
@@ -1281,6 +1281,60 @@ main {
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
   line-height: 1.6;
+}
+
+.project-detail-technologies {
+}
+
+.project-detail-technologies h4 {
+  color: var(--orange-yellow-crayola);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-500);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.project-detail-technologies .tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.project-detail-technologies .tech-item {
+  background: var(--bg-gradient-onyx);
+  color: var(--light-gray);
+  padding: 20px;
+  border-radius: 20px;
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+  border: 1px solid var(--jet);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: fit-content;
+  white-space: nowrap;
+  height: 70px;
+  min-height: 28px;
+  margin-right: 10px;
+  margin-top: 16px;
+  margin-bottom: -15px;
+}
+
+.project-detail-technologies .tech-item i {
+  font-size: var(--fs-6);
+  color: var(--orange-yellow-crayola);
+}
+
+.project-detail-links-section h4 {
+  color: var(--orange-yellow-crayola);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-500);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  margin-top: 25px;
 }
 
 .project-detail-links {

@@ -222,6 +222,7 @@ const showProjectDetail = function (projectItem) {
   const image = projectItem.getAttribute("data-project-image");
   const github = projectItem.getAttribute("data-project-github");
   const live = projectItem.getAttribute("data-project-live");
+  const technologies = projectItem.getAttribute("data-project-technologies");
   const images = projectItem.getAttribute("data-project-images");
 
   console.log("Showing project detail for:", title); // Debug log
@@ -252,6 +253,58 @@ const showProjectDetail = function (projectItem) {
     liveBtn.style.display = 'inline-flex';
   } else {
     liveBtn.style.display = 'none';
+  }
+
+  // Handle title visibility and text - hide if no buttons are visible
+  const linksSectionTitle = document.querySelector('.project-detail-links-section h4');
+  const hasGithub = github && github !== '' && github !== '#';
+  const hasLive = live && live !== '' && live !== '#';
+  
+  if (hasGithub && hasLive) {
+    linksSectionTitle.textContent = 'Github & Live Demo';
+    linksSectionTitle.style.display = 'block';
+  } else if (hasGithub && !hasLive) {
+    linksSectionTitle.textContent = 'Github';
+    linksSectionTitle.style.display = 'block';
+  } else if (!hasGithub && hasLive) {
+    linksSectionTitle.textContent = 'Live Demo';
+    linksSectionTitle.style.display = 'block';
+  } else {
+    linksSectionTitle.style.display = 'none';
+  }
+
+  // Handle Technologies
+  const techContainer = document.querySelector("[data-detail-project-technologies]");
+  if (technologies && technologies !== '') {
+    const techList = technologies.split(',').map(tech => tech.trim());
+    
+    // Technology to icon mapping
+    const techIcons = {
+      'JavaScript': 'bx bxl-javascript',
+      'React': 'bx bxl-react',
+      'Node.js': 'bx bxl-nodejs',
+      'Python': 'bx bxl-python',
+      'SQL': 'bx bx-data',
+      'Git': 'bx bxl-git',
+      'HTML': 'bx bxl-html5',
+      'CSS': 'bx bxl-css3',
+      'TypeScript': 'bx bxl-typescript',
+      'Figma': 'bx bxl-figma',
+      'UI/UX Design': 'bx bx-palette',
+      'Web Design': 'bx bx-palette',
+      'Responsive Design': 'bx bx-mobile-alt',
+      'API': 'bx bx-code-alt',
+      'Typescrips': 'bx bxl-typescript', // Fix typo in your JSON
+      'CSS': 'bx bxl-css3',
+      'JavaScript': 'bx bxl-javascript'
+    };
+    
+    techContainer.innerHTML = techList.map(tech => {
+      const iconClass = techIcons[tech] || 'bx bx-code-alt'; // Default icon for unknown tech
+      return `<span class="tech-item"><i class="${iconClass}"></i> ${tech}</span>`;
+    }).join('');
+  } else {
+    techContainer.innerHTML = '';
   }
 
 
