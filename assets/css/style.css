@@ -336,6 +336,10 @@ main {
   border-radius: 20px;
 }
 
+.avatar-box img {
+  transform: scale(0.85);
+}
+
 .info-content .name {
   color: var(--white-2);
   font-size: var(--fs-3);
@@ -994,6 +998,7 @@ main {
 .download-btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   background: var(--orange-yellow-crayola);
   color: var(--smoky-black);
@@ -1005,6 +1010,8 @@ main {
   transition: var(--transition-1);
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  width: 140px;
+  min-width: 140px;
 }
 
 .download-btn:hover {
@@ -1904,7 +1911,8 @@ textarea.form-input::-webkit-resizer { display: none; }
   }
 
   .download-btn {
-    width: 100%;
+    width: 140px;
+    min-width: 140px;
     justify-content: center;
   }
 
@@ -2161,9 +2169,9 @@ textarea.form-input::-webkit-resizer { display: none; }
   }
 
   .download-btn {
-    width: auto;
-    justify-content: flex-start;
-    min-width: 120px;
+    width: 140px;
+    min-width: 140px;
+    justify-content: center;
   }
 
 
