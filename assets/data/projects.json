@@ -1,0 +1,48 @@
+{
+  "projects": [
+    {
+      "id": "medra",
+      "title": "Medra AS",
+      "category": "Web design",
+      "description": "A comprehensive design project for Medra AS, showcasing modern web design principles and user experience. This project demonstrates expertise in Figma design workflows, responsive layouts, and professional UI/UX design.",
+      "image": "./assets/images/medra/medra1.webp",
+      "images": [
+        "./assets/images/medra/medra1.webp",
+        "./assets/images/medra/medra2.webp",
+        "./assets/images/medra/medra3.webp",
+        "./assets/images/medra/medra4.webp",
+        "./assets/images/medra/medra5.webp"
+      ],
+      "live": "https://medra.no",
+      "technologies": ["Figma", "UI/UX Design", "Web Design"]
+    },
+    {
+      "id": "weather-app",
+      "title": "Weather App",
+      "category": "Web development",
+      "description": "A modern weather application built with React and integrated with weather APIs. Features include current weather conditions, 7-day forecast, location-based weather, and beautiful responsive design.",
+      "image": "./assets/images/project-2.png",
+      "images": [
+        "./assets/images/project-2.png",
+        "./assets/images/project-4.png",
+        "./assets/images/project-5.png"
+      ],
+      "github": "https://github.com/Martinskro/weather-app",
+      "live": "https://weather-app-demo.vercel.app",
+      "technologies": ["React", "API", "CSS", "JavaScript"]
+    },
+    {
+      "id": "portfolio-website",
+      "title": "Portfolio Website",
+      "category": "Web design",
+      "description": "A modern, responsive portfolio website showcasing personal projects and skills. Built with clean HTML, CSS, and JavaScript, featuring smooth animations and mobile-first design principles.",
+      "image": "./assets/images/project-3.jpg",
+      "images": [
+        "./assets/images/project-3.jpg"
+      ],
+      "github": "https://github.com/Martinskro/portfolio-website",
+      "live": "https://martinskrolsvik.vercel.app",
+      "technologies": ["HTML", "CSS", "JavaScript", "Responsive Design"]
+    }
+  ]
+}

@@ -204,6 +204,7 @@ const showProjectDetail = function (projectItem) {
   document.querySelector("[data-detail-project-github]").href = github;
   document.querySelector("[data-detail-project-live]").href = live;
 
+
   // Update navigation buttons state
   updateGalleryButtons();
 
