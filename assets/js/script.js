@@ -400,6 +400,21 @@ nextBtn.addEventListener("click", function (e) {
   showNextImage();
 });
 
+// iOS-specific touch handling for navigation buttons
+prevBtn.addEventListener("touchend", function (e) {
+  e.preventDefault();
+  showPrevImage();
+  // Force blur to remove iOS touch highlight
+  this.blur();
+});
+
+nextBtn.addEventListener("touchend", function (e) {
+  e.preventDefault();
+  showNextImage();
+  // Force blur to remove iOS touch highlight
+  this.blur();
+});
+
 // keyboard navigation for gallery
 document.addEventListener("keydown", function (e) {
   if (projectDetail.classList.contains("active")) {
