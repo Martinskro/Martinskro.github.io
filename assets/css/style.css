@@ -1130,26 +1130,38 @@ main {
   background: var(--bg-gradient-jet);
   overflow-y: auto;
   overflow-x: hidden;
+  mask: linear-gradient(to bottom, black 0%, black 100%);
+  -webkit-mask: linear-gradient(to bottom, black 0%, black 100%);
 }
 
-/* Custom scrollbar for project images */
+/* Custom scrollbar pill */
 .project-main-image::-webkit-scrollbar {
-  width: 12px;
+  width: 8px;
 }
 
 .project-main-image::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
+  background: transparent;
 }
 
 .project-main-image::-webkit-scrollbar-thumb {
   background: var(--orange-yellow-crayola);
-  border-radius: 10px;
-  border: 2px solid var(--jet);
+  border-radius: 20px;
+  border: none;
 }
 
 .project-main-image::-webkit-scrollbar-thumb:hover {
   background: var(--white);
+}
+
+/* Only hide scrollbar for non-webkit browsers */
+.project-main-image {
+  -ms-overflow-style: none;
+}
+
+/* Firefox */
+.project-main-image {
+  scrollbar-width: thin;
+  scrollbar-color: var(--orange-yellow-crayola) transparent;
 }
 
 .project-main-image img {
