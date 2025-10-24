@@ -344,9 +344,14 @@ const showProjectDetail = function (projectItem) {
 
 // Gallery navigation functions
 const updateGalleryButtons = function () {
-  // No need to disable buttons since we're looping
-  prevBtn.disabled = false;
-  nextBtn.disabled = false;
+  // Hide buttons if there's only one image/video
+  if (currentProjectImages.length <= 1) {
+    prevBtn.style.display = 'none';
+    nextBtn.style.display = 'none';
+  } else {
+    prevBtn.style.display = 'flex';
+    nextBtn.style.display = 'flex';
+  }
 };
 
 const showNextImage = function () {
