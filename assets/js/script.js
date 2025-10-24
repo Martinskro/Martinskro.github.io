@@ -70,8 +70,31 @@ for (let i = 0; i < selectItems.length; i++) {
     let selectedValue = this.getAttribute("data-filter-value") || this.innerText.toLowerCase();
     selectValue.innerText = this.innerText;
     elementToggleFunc(select);
-    filterFunc(selectedValue);
+    
+    // Use project manager filtering if available, otherwise use original filtering
+    if (window.projectManager) {
+      window.projectManager.filterProjects(selectedValue);
+    } else {
+      filterFunc(selectedValue);
+    }
 
+  });
+}
+
+// Also add touch events for better iOS support
+for (let i = 0; i < selectItems.length; i++) {
+  selectItems[i].addEventListener("touchend", function (e) {
+    e.preventDefault();
+    let selectedValue = this.getAttribute("data-filter-value") || this.innerText.toLowerCase();
+    selectValue.innerText = this.innerText;
+    elementToggleFunc(select);
+    
+    // Use project manager filtering if available, otherwise use original filtering
+    if (window.projectManager) {
+      window.projectManager.filterProjects(selectedValue);
+    } else {
+      filterFunc(selectedValue);
+    }
   });
 }
 
