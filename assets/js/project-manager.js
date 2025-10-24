@@ -85,6 +85,7 @@ class ProjectManager {
     // Initialize the filtering system that already exists in the main script
     const filterItems = document.querySelectorAll("[data-filter-item]");
     const filterButtons = document.querySelectorAll("[data-filter-btn]");
+    const selectItems = document.querySelectorAll("[data-select-item]");
 
     if (filterButtons.length > 0) {
       // Add click event listeners to filter buttons
@@ -101,6 +102,27 @@ class ProjectManager {
         });
       });
     }
+
+    if (selectItems.length > 0) {
+      // Add click event listeners to select dropdown items
+      selectItems.forEach(item => {
+        item.addEventListener("click", () => {
+          const filterValue = item.getAttribute("data-filter-value") || item.innerText.toLowerCase();
+          
+          // Update active button
+          filterButtons.forEach(btn => btn.classList.remove("active"));
+          const correspondingBtn = Array.from(filterButtons).find(btn => 
+            btn.getAttribute("data-filter-btn") === filterValue
+          );
+          if (correspondingBtn) {
+            correspondingBtn.classList.add("active");
+          }
+          
+          // Filter projects
+          this.filterProjects(filterValue);
+        });
+      });
+    }
   }
 
   filterProjects(filterValue) {
@@ -111,7 +133,7 @@ class ProjectManager {
         item.classList.add("active");
       } else {
         const category = item.getAttribute("data-category");
-        if (category === filterValue) {
+        if (category === filterValue.toLowerCase()) {
           item.classList.add("active");
         } else {
           item.classList.remove("active");
