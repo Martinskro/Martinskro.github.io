@@ -3,46 +3,61 @@
     {
       "id": "medra",
       "title": "Medra AS",
-      "category": "Web design",
+      "category": "Web",
       "description": "A comprehensive design project for Medra AS, showcasing modern web design principles and user experience. This project demonstrates expertise in Figma design workflows, responsive layouts, and professional UI/UX design.",
-      "image": "./assets/images/medra/medra1.webp",
+      "image": "./assets/images/projects/medra/medra1.webp",
       "images": [
-        "./assets/images/medra/medra1.webp",
-        "./assets/images/medra/medra2.webp",
-        "./assets/images/medra/medra3.webp",
-        "./assets/images/medra/medra4.webp",
-        "./assets/images/medra/medra5.webp"
+        "./assets/images/projects/medra/medra1.webp",
+        "./assets/images/projects/medra/medra2.webp",
+        "./assets/images/projects/medra/medra3.webp",
+        "./assets/images/projects/medra/medra4.webp",
+        "./assets/images/projects/medra/medra5.webp"
       ],
-      "live": "https://medra.no",
+      "github": "",
+      "live": "",
       "technologies": ["Figma", "UI/UX Design", "Web Design"]
-    },
-    {
-      "id": "weather-app",
-      "title": "Weather App",
-      "category": "Web development",
-      "description": "A modern weather application built with React and integrated with weather APIs. Features include current weather conditions, 7-day forecast, location-based weather, and beautiful responsive design.",
-      "image": "./assets/images/project-2.png",
-      "images": [
-        "./assets/images/project-2.png",
-        "./assets/images/project-4.png",
-        "./assets/images/project-5.png"
-      ],
-      "github": "https://github.com/Martinskro/weather-app",
-      "live": "https://weather-app-demo.vercel.app",
-      "technologies": ["React", "API", "CSS", "JavaScript"]
     },
     {
       "id": "portfolio-website",
       "title": "Portfolio Website",
-      "category": "Web design",
+      "category": "Web",
       "description": "A modern, responsive portfolio website showcasing personal projects and skills. Built with clean HTML, CSS, and JavaScript, featuring smooth animations and mobile-first design principles.",
       "image": "./assets/images/project-3.jpg",
       "images": [
         "./assets/images/project-3.jpg"
       ],
-      "github": "https://github.com/Martinskro/portfolio-website",
-      "live": "https://martinskrolsvik.vercel.app",
+      "github": "",
+      "live": "https://martinskro.github.io",
       "technologies": ["HTML", "CSS", "JavaScript", "Responsive Design"]
-    }
+    },
+    {
+        "id": "kystskolen-app",
+        "title": "Kystskolen App",
+        "category": "Applications",
+        "description": "A modern, responsive portfolio website showcasing personal projects and skills. Built with clean HTML, CSS, and JavaScript, featuring smooth animations and mobile-first design principles.",
+        "image": "./assets/images/projects/kystskolen-app/kystskolen1.webp",
+        "images": [
+          "./assets/images/projects/kystskolen-app/kystskolen1.webp",
+          "./assets/images/projects/kystskolen-app/kystskolen2.webp",
+          "./assets/images/projects/kystskolen-app/kystskolen3.webp"
+        ],
+        "github": "",
+        "live": "https://testflight.apple.com/join/ftQPzuZ3",
+        "technologies": ["HTML", "CSS", "JavaScript", "Responsive Design"]
+      },
+      {
+        "id": "3d-spinner",
+        "title": "Logo to 3D Spin Animation",
+        "category": "Others",
+        "description": "A modern, responsive portfolio website showcasing personal projects and skills. Built with clean HTML, CSS, and JavaScript, featuring smooth animations and mobile-first design principles.",
+        "image": "./assets/images/projects/3d-spinner/3d-spinner1.webp",
+        "images": [
+          "./assets/images/projects/3d-spinner/3d-spinner1.webm",
+          "./assets/images/projects/3d-spinner/3d-spinner1.webp"
+        ],
+        "github": "https://github.com/Martinskro/3d-logospin",
+        "live": "https://3d-logospin.vercel.app/editor",
+        "technologies": ["Typescrips", "CSS", "JavaScript"]
+      }
   ]
 }

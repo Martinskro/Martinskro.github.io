@@ -139,9 +139,9 @@ for (let i = 0; i < navigationLinks.length; i++) {
   navigationLinks[i].addEventListener("click", function () {
     const targetPage = this.innerHTML.toLowerCase();
 
-    // Special handling for portfolio page
-    if (targetPage === "portfolio") {
-      // If we're currently in project detail view, go back to portfolio grid
+    // Special handling for projects page
+    if (targetPage === "projects") {
+      // If we're currently in project detail view, go back to projects grid
       if (projectDetail && projectDetail.classList.contains("active")) {
         showPortfolioGrid();
         return;
@@ -167,7 +167,7 @@ for (let i = 0; i < navigationLinks.length; i++) {
 // portfolio navigation variables (duplicates removed)
 const projectLinks = document.querySelectorAll("[data-project-link]");
 const backToPortfolioBtn = document.querySelector("[data-back-to-portfolio]");
-const portfolioNavLink = Array.from(document.querySelectorAll('button[data-nav-link]')).find(btn => btn.textContent.trim() === 'Portfolio');
+const portfolioNavLink = Array.from(document.querySelectorAll('button[data-nav-link]')).find(btn => btn.textContent.trim() === 'Projects');
 
 // gallery navigation variables
 const prevBtn = document.querySelector("[data-gallery-prev]");
@@ -201,8 +201,24 @@ const showProjectDetail = function (projectItem) {
   document.querySelector("[data-detail-project-title]").textContent = title;
   document.querySelector("[data-detail-project-category]").textContent = category;
   document.querySelector("[data-detail-project-description]").textContent = description;
-  document.querySelector("[data-detail-project-github]").href = github;
-  document.querySelector("[data-detail-project-live]").href = live;
+  
+  // Handle GitHub link
+  const githubBtn = document.querySelector("[data-detail-project-github]");
+  if (github && github !== '' && github !== '#') {
+    githubBtn.href = github;
+    githubBtn.style.display = 'inline-flex';
+  } else {
+    githubBtn.style.display = 'none';
+  }
+  
+  // Handle Live link
+  const liveBtn = document.querySelector("[data-detail-project-live]");
+  if (live && live !== '' && live !== '#') {
+    liveBtn.href = live;
+    liveBtn.style.display = 'inline-flex';
+  } else {
+    liveBtn.style.display = 'none';
+  }
 
 
   // Update navigation buttons state
