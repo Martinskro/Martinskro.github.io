@@ -2,6 +2,7 @@
   "projects": [
     {
       "id": "medra",
+      "enabled": true,
       "title": "Medra AS",
       "category": "Web",
       "description": "A comprehensive design project for Medra AS, showcasing modern web design principles and user experience. This project demonstrates expertise in Figma design workflows, responsive layouts, and professional UI/UX design.",
@@ -19,6 +20,7 @@
     },
     {
       "id": "portfolio-website",
+      "enabled": true,
       "title": "Portfolio Website",
       "category": "Web",
       "description": "A modern, responsive portfolio website showcasing personal projects and skills. Built with clean HTML, CSS, and JavaScript, featuring smooth animations and mobile-first design principles.",
@@ -35,6 +37,7 @@
     },
     {
         "id": "kystskolen-app",
+        "enabled": true,
         "title": "Kystskolen App",
         "category": "Applications",
         "description": "A modern, responsive portfolio website showcasing personal projects and skills. Built with clean HTML, CSS, and JavaScript, featuring smooth animations and mobile-first design principles.",
@@ -50,6 +53,7 @@
       },
       {
         "id": "3d-spinner",
+        "enabled": true,
         "title": "PNG to 3D-Animation",
         "category": "Others",
         "description": "A modern, responsive portfolio website showcasing personal projects and skills. Built with clean HTML, CSS, and JavaScript, featuring smooth animations and mobile-first design principles.",
@@ -60,9 +64,10 @@
         "github": "https://github.com/Martinskro/3d-logospin",
         "live": "https://3d-logospin.vercel.app/editor",
         "technologies": ["Typescrips", "CSS", "JavaScript"]
-      }/*,
+      },
       {
         "id": "crust-kingdom",
+        "enabled": false,
         "title": "Java RPG Game",
         "category": "Others",
         "description": "Pizza restaurant RPG game built in Java, featuring a 2D top-down view and a pizza-themed gameplay.",
@@ -76,6 +81,7 @@
       },
       {
         "id": "fighter-jets",
+        "enabled": false,
         "title": "1v1 Fighter Jet Game",
         "category": "Others",
         "description": "1v1 fighter jet game built in Java, featuring a 2D top-down view and a fighter jet-themed gameplay.",
@@ -86,6 +92,6 @@
         "github": "https://github.com/Martinskro/Fighter-Jets",
         "live": "",
         "technologies": ["Java"]
-      }*/
+      }
   ]
 }

@@ -9,7 +9,8 @@ class ProjectManager {
     try {
       const response = await fetch('./assets/data/projects.json');
       const data = await response.json();
-      this.projects = data.projects;
+      // Filter out disabled projects (enabled: false or missing enabled property is treated as enabled by default)
+      this.projects = data.projects.filter(project => project.enabled !== false);
       this.renderProjects();
       
       // Initialize filtering after projects are loaded
