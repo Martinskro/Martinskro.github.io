@@ -60,7 +60,7 @@
         "github": "https://github.com/Martinskro/3d-logospin",
         "live": "https://3d-logospin.vercel.app/editor",
         "technologies": ["Typescrips", "CSS", "JavaScript"]
-      },
+      }/*,
       {
         "id": "crust-kingdom",
         "title": "Java RPG Game",
@@ -86,6 +86,6 @@
         "github": "https://github.com/Martinskro/Fighter-Jets",
         "live": "",
         "technologies": ["Java"]
-      }
+      }*/
   ]
 }
