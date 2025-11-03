@@ -305,9 +305,11 @@ const showProjectDetail = function (projectItem) {
     const techIcons = {
       'JavaScript': 'bx bxl-javascript',
       'React': 'bx bxl-react',
+      'React Native': 'bx bxl-react',
       'Node.js': 'bx bxl-nodejs',
       'Python': 'bx bxl-python',
       'SQL': 'bx bx-data',
+      'Supabase': 'bx bx-server',
       'Git': 'bx bxl-git',
       'HTML': 'bx bxl-html5',
       'CSS': 'bx bxl-css3',

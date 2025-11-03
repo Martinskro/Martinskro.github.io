@@ -40,7 +40,7 @@
         "enabled": true,
         "title": "Kystskolen App",
         "category": "Applications",
-        "description": "A modern, responsive portfolio website showcasing personal projects and skills. Built with clean HTML, CSS, and JavaScript, featuring smooth animations and mobile-first design principles.",
+        "description": "Leading the development of Kystskolen's digital subsidiary, positioning the company within the e-learning segment. Designing and executing an end-to-end digital strategy, from product concept to implementation, aligning technical and commercial goals. Developing a React Native app with integrated database and backend infrastructure, currently in pre-launch development.",
         "image": "./assets/images/projects/kystskolen-app/kystskolen1.webp",
         "images": [
           "./assets/images/projects/kystskolen-app/kystskolen1.webp",
@@ -49,7 +49,7 @@
         ],
         "github": "",
         "live": "https://testflight.apple.com/join/ftQPzuZ3",
-        "technologies": ["HTML", "CSS", "JavaScript", "Responsive Design"]
+        "technologies": ["React Native", "Supabase"]
       },
       {
         "id": "3d-spinner",
