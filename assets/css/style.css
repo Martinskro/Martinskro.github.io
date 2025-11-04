@@ -1604,10 +1604,14 @@ main {
   height: 100%;
   object-fit: cover;
   object-position: top;
-  transition: var(--transition-1);
+  transition: transform var(--transition-1);
+  transform: scale(1);
 }
 
-.project-item > a:hover img { transform: scale(1.1); }
+.project-item > .project-link:hover .project-img img,
+.project-item > a:hover .project-img img {
+  transform: scale(1.15);
+}
 
 .project-title,
 .project-category { margin-left: 10px; }
