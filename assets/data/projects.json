@@ -40,7 +40,7 @@
         "enabled": true,
         "title": "Kystskolen App",
         "category": "Applications",
-        "description": "Leading the development of Kystskolen's digital subsidiary, positioning the company within the e-learning segment. Designing and executing an end-to-end digital strategy, from product concept to implementation, aligning technical and commercial goals. Developing a React Native app with integrated database and backend infrastructure, currently in pre-launch development.",
+        "description": "A cross-platform mobile e-learning application designed for coastal and maritime education. The app provides an interactive learning platform for boat license courses and maritime training, featuring integrated database management and real-time synchronization. Built with React Native and Supabase, offering seamless user experience across iOS and Android platforms.",
         "image": "./assets/images/projects/kystskolen-app/kystskolen1.webp",
         "images": [
           "./assets/images/projects/kystskolen-app/kystskolen1.webp",
