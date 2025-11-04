@@ -185,7 +185,19 @@ for (let i = 0; i < navigationLinks.length; i++) {
   });
 }
 
-
+// Avatar click navigation to About page
+const avatarLink = document.querySelector("[data-avatar-link]");
+if (avatarLink) {
+  avatarLink.addEventListener("click", function () {
+    // Find and click the About navigation button
+    const aboutNavLink = Array.from(navigationLinks).find(link => 
+      link.textContent.trim().toLowerCase() === "about"
+    );
+    if (aboutNavLink) {
+      aboutNavLink.click();
+    }
+  });
+}
 
 // portfolio navigation variables (duplicates removed)
 const projectLinks = document.querySelectorAll("[data-project-link]");

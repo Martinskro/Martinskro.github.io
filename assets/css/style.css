@@ -334,11 +334,18 @@ main {
 .avatar-box {
   background: var(--bg-gradient-onyx);
   border-radius: 20px;
+  transition: var(--transition-1);
+}
+
+.avatar-box[data-avatar-link]:hover {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-2);
 }
 
 .avatar-box img {
   transform: scale(0.85);
   width: 70px;
+  transition: var(--transition-1);
 }
 
 /* Mobile spacing improvements for 0px - 579px view */
