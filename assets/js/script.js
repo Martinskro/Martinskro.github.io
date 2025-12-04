@@ -456,14 +456,94 @@ const formBtn = document.querySelector("[data-form-btn]");
   emailjs.init("kbyhHJzM8F1SCB2uk");
 })();
 
+// Security: HTML escaping function to prevent XSS
+const escapeHtml = function(text) {
+  const div = document.createElement('div');
+  div.textContent = text;
+  return div.innerHTML;
+};
+
+// Security: Sanitize input by removing dangerous characters and limiting length
+const sanitizeInput = function(input, maxLength = 1000) {
+  if (!input) return '';
+  
+  // Trim whitespace
+  let sanitized = input.trim();
+  
+  // Limit length to prevent DoS
+  if (sanitized.length > maxLength) {
+    sanitized = sanitized.substring(0, maxLength);
+  }
+  
+  // Remove newlines and carriage returns to prevent email header injection
+  sanitized = sanitized.replace(/[\r\n]/g, ' ');
+  
+  // Remove null bytes
+  sanitized = sanitized.replace(/\0/g, '');
+  
+  return sanitized;
+};
+
+// Security: Validate and sanitize email address
+const sanitizeEmail = function(email) {
+  if (!email) return '';
+  
+  // Basic email validation regex
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  
+  // Trim and lowercase
+  let sanitized = email.trim().toLowerCase();
+  
+  // Remove newlines and carriage returns (email header injection prevention)
+  sanitized = sanitized.replace(/[\r\n]/g, '');
+  
+  // Remove null bytes
+  sanitized = sanitized.replace(/\0/g, '');
+  
+  // Limit length
+  if (sanitized.length > 254) {
+    sanitized = sanitized.substring(0, 254);
+  }
+  
+  // Validate format
+  if (!emailRegex.test(sanitized)) {
+    return '';
+  }
+  
+  return sanitized;
+};
+
 if (contactForm) {
-  // form validation
+  // form validation with length checks
   const formValidation = function () {
     let isValid = true;
     
     formInputs.forEach(input => {
-      if (input.value.trim() === '') {
+      const value = input.value.trim();
+      
+      // Check if empty
+      if (value === '') {
         isValid = false;
+        return;
+      }
+      
+      // Check length limits
+      if (input.name === 'fullname' && value.length > 100) {
+        isValid = false;
+        return;
+      }
+      
+      if (input.name === 'email') {
+        const sanitizedEmail = sanitizeEmail(value);
+        if (!sanitizedEmail || sanitizedEmail !== value.toLowerCase().trim()) {
+          isValid = false;
+          return;
+        }
+      }
+      
+      if (input.name === 'message' && value.length > 5000) {
+        isValid = false;
+        return;
       }
     });
     
@@ -479,12 +559,24 @@ if (contactForm) {
   contactForm.addEventListener("submit", function (e) {
     e.preventDefault();
     
-    // Get form data
+    // Get and sanitize form data
     const formData = new FormData(contactForm);
+    
+    // Sanitize all inputs
+    const fullname = sanitizeInput(formData.get('fullname'), 100);
+    const email = sanitizeEmail(formData.get('email'));
+    const message = sanitizeInput(formData.get('message'), 5000);
+    
+    // Validate required fields after sanitization
+    if (!fullname || !email || !message) {
+      showErrorMessage('Please fill in all fields with valid data.');
+      return;
+    }
+    
     const templateParams = {
-      from_name: formData.get('fullname'),
-      email: formData.get('email'),  // Changed from 'from_email' to 'email' to match template
-      message: formData.get('message'),
+      from_name: fullname,
+      email: email,
+      message: message,
       time: new Date().toLocaleString('en-US', {
         weekday: 'long',
         year: 'numeric',
@@ -505,7 +597,7 @@ if (contactForm) {
     emailjs.send('service_9dzhekk', 'template_b7ila3j', templateParams)
       .then(function(response) {
         console.log('SUCCESS!', response.status, response.text);
-        showSuccessMessage(templateParams.from_name);
+        showSuccessMessage(fullname);
         contactForm.reset();
         formBtn.innerHTML = '<ion-icon name="send"></ion-icon><span>Send Message</span>';
         formBtn.disabled = true;
@@ -523,21 +615,45 @@ if (contactForm) {
   });
 }
 
-// success message function
+// success message function - FIXED: Uses textContent to prevent XSS
 const showSuccessMessage = function (name) {
   // Create success message element
   const successMessage = document.createElement('div');
   successMessage.className = 'success-message';
-  successMessage.innerHTML = `
-    <div class="success-content">
-      <ion-icon name="checkmark-circle"></ion-icon>
-      <h4>Message Sent Successfully!</h4>
-      <p>Thank you ${name}! I'll get back to you as soon as possible.</p>
-      <button class="success-close" onclick="this.parentElement.parentElement.remove()">
-        <ion-icon name="close"></ion-icon>
-      </button>
-    </div>
-  `;
+  
+  // Create content structure safely
+  const content = document.createElement('div');
+  content.className = 'success-content';
+  
+  // Create icon
+  const icon = document.createElement('ion-icon');
+  icon.setAttribute('name', 'checkmark-circle');
+  
+  // Create heading
+  const heading = document.createElement('h4');
+  heading.textContent = 'Message Sent Successfully!';
+  
+  // Create paragraph with escaped name
+  const paragraph = document.createElement('p');
+  paragraph.textContent = `Thank you ${escapeHtml(name)}! I'll get back to you as soon as possible.`;
+  
+  // Create close button
+  const closeBtn = document.createElement('button');
+  closeBtn.className = 'success-close';
+  closeBtn.addEventListener('click', function() {
+    successMessage.remove();
+  });
+  
+  const closeIcon = document.createElement('ion-icon');
+  closeIcon.setAttribute('name', 'close');
+  closeBtn.appendChild(closeIcon);
+  
+  // Assemble content
+  content.appendChild(icon);
+  content.appendChild(heading);
+  content.appendChild(paragraph);
+  content.appendChild(closeBtn);
+  successMessage.appendChild(content);
   
   // Add to body
   document.body.appendChild(successMessage);
@@ -550,20 +666,44 @@ const showSuccessMessage = function (name) {
   }, 5000);
 };
 
-// error message function
-const showErrorMessage = function () {
+// error message function - FIXED: Uses textContent to prevent XSS
+const showErrorMessage = function (customMessage) {
   const errorMessage = document.createElement('div');
   errorMessage.className = 'error-message';
-  errorMessage.innerHTML = `
-    <div class="error-content">
-      <ion-icon name="close-circle"></ion-icon>
-      <h4>Message Failed to Send</h4>
-      <p>Sorry, there was an error sending your message. Please try again or contact me directly.</p>
-      <button class="error-close" onclick="this.parentElement.parentElement.remove()">
-        <ion-icon name="close"></ion-icon>
-      </button>
-    </div>
-  `;
+  
+  // Create content structure safely
+  const content = document.createElement('div');
+  content.className = 'error-content';
+  
+  // Create icon
+  const icon = document.createElement('ion-icon');
+  icon.setAttribute('name', 'close-circle');
+  
+  // Create heading
+  const heading = document.createElement('h4');
+  heading.textContent = 'Message Failed to Send';
+  
+  // Create paragraph
+  const paragraph = document.createElement('p');
+  paragraph.textContent = customMessage || 'Sorry, there was an error sending your message. Please try again or contact me directly.';
+  
+  // Create close button
+  const closeBtn = document.createElement('button');
+  closeBtn.className = 'error-close';
+  closeBtn.addEventListener('click', function() {
+    errorMessage.remove();
+  });
+  
+  const closeIcon = document.createElement('ion-icon');
+  closeIcon.setAttribute('name', 'close');
+  closeBtn.appendChild(closeIcon);
+  
+  // Assemble content
+  content.appendChild(icon);
+  content.appendChild(heading);
+  content.appendChild(paragraph);
+  content.appendChild(closeBtn);
+  errorMessage.appendChild(content);
   
   document.body.appendChild(errorMessage);
   
