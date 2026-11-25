@@ -451,15 +451,9 @@ const formBtn = document.querySelector("[data-form-btn]");
   emailjs.init("kbyhHJzM8F1SCB2uk");
 })();
 
-// Security: HTML escaping function to prevent XSS
-const escapeHtml = function(text) {
-  const div = document.createElement('div');
-  div.textContent = text;
-  return div.innerHTML;
-};
-
 // Security: Sanitize input by removing dangerous characters and limiting length
-const sanitizeInput = function(input, maxLength = 1000) {
+// Set allowNewlines for body text (e.g. the message); keep it off for single-line fields
+const sanitizeInput = function(input, maxLength = 1000, allowNewlines = false) {
   if (!input) return '';
   
   // Trim whitespace
@@ -470,8 +464,13 @@ const sanitizeInput = function(input, maxLength = 1000) {
     sanitized = sanitized.substring(0, maxLength);
   }
   
-  // Remove newlines and carriage returns to prevent email header injection
-  sanitized = sanitized.replace(/[\r\n]/g, ' ');
+  if (allowNewlines) {
+    // Normalize line endings so multi-line messages arrive intact
+    sanitized = sanitized.replace(/\r\n?/g, '\n');
+  } else {
+    // Single-line fields: replace newlines with spaces
+    sanitized = sanitized.replace(/[\r\n]/g, ' ');
+  }
   
   // Remove null bytes
   sanitized = sanitized.replace(/\0/g, '');
@@ -560,7 +559,7 @@ if (contactForm) {
     // Sanitize all inputs
     const fullname = sanitizeInput(formData.get('fullname'), 100);
     const email = sanitizeEmail(formData.get('email'));
-    const message = sanitizeInput(formData.get('message'), 5000);
+    const message = sanitizeInput(formData.get('message'), 5000, true);
     
     // Validate required fields after sanitization
     if (!fullname || !email || !message) {
@@ -621,9 +620,9 @@ const showSuccessMessage = function (name) {
   const heading = document.createElement('h4');
   heading.textContent = 'Message Sent Successfully!';
   
-  // Create paragraph with escaped name
+  // textContent renders the name as plain text, so no escaping is needed
   const paragraph = document.createElement('p');
-  paragraph.textContent = `Thank you ${escapeHtml(name)}! I'll get back to you as soon as possible.`;
+  paragraph.textContent = `Thank you ${name}! I'll get back to you as soon as possible.`;
   
   // Create close button
   const closeBtn = document.createElement('button');
