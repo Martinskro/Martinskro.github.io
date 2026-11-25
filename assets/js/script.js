@@ -260,8 +260,6 @@ const showProjectDetail = function (projectItem) {
   const technologies = projectItem.getAttribute("data-project-technologies");
   const images = projectItem.getAttribute("data-project-images");
 
-  console.log("Showing project detail for:", title); // Debug log
-
   // Parse images (comma-separated string)
   currentProjectImages = images ? images.split(',').map(img => img.trim()) : [image];
   currentImageIndex = 0;
@@ -351,9 +349,6 @@ const showProjectDetail = function (projectItem) {
   // Hide grid view and show detail view
   portfolioGrid.classList.add("hidden");
   projectDetail.classList.add("active");
-  
-  console.log("Grid hidden:", portfolioGrid.classList.contains("hidden")); // Debug log
-  console.log("Detail active:", projectDetail.classList.contains("active")); // Debug log
 };
 
 // Gallery navigation functions
@@ -593,21 +588,14 @@ if (contactForm) {
     formBtn.disabled = true;
     
     // Send email using EmailJS
-    // Replace 'service_9dzhekk' with your new Gmail service ID
     emailjs.send('service_9dzhekk', 'template_b7ila3j', templateParams)
       .then(function(response) {
-        console.log('SUCCESS!', response.status, response.text);
         showSuccessMessage(fullname);
         contactForm.reset();
         formBtn.innerHTML = '<ion-icon name="send"></ion-icon><span>Send Message</span>';
         formBtn.disabled = true;
       }, function(error) {
         console.error('EmailJS Error:', error);
-        console.log('Error details:', {
-          status: error.status,
-          text: error.text,
-          details: error
-        });
         showErrorMessage();
         formBtn.innerHTML = '<ion-icon name="send"></ion-icon><span>Send Message</span>';
         formBtn.disabled = false;
